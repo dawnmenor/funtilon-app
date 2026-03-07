@@ -86,7 +86,10 @@ Route::post('/token', function(Request $request) {
 
 // Controller 
 // Middleware
-Route::get('/users', [UserController::class, 'index'])->middleware('user-middleware');
+// Route::get('/users', [UserController::class, 'index'])->middleware('user-middleware');
+
+Route::get('/users', [UserController::class, 'index']);
+
 
 // Resource
 Route::resource('products', ProductController::class);
